@@ -70,8 +70,10 @@ namespace WindowsFormsApplication1
         {
             try
             {
+
                 ((Button)sender).Enabled = false;
-                string inputBIC = this.textBox1.Text;
+                string inputBIC = this.textBox1.Text.Trim();
+                
                 if (string.IsNullOrEmpty(inputBIC))
                 {
                     MessageBox.Show("BIC can be empty");
